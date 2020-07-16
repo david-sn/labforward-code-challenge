@@ -2,28 +2,50 @@ package com.labforward.api.core.domain;
 
 /**
  * Base message response
+ * @param <T>
  */
-public class ApiMessage {
+public class ApiMessage<T> {
 
-	protected String message;
+    private String status;
 
-	protected String[] error;
+    private T result;
 
-	public ApiMessage(String message) {
-		this.message = message;
-		this.error = new String[0];
-	}
+    protected String message;
 
-	public ApiMessage(String message, String[] error) {
-		this.message = message;
-		this.error = error;
-	}
+    protected String[] error;
 
-	public String getMessage() {
-		return message;
-	}
+    public ApiMessage(String message) {
+        this.message = message;
+        this.error = new String[0];
+        this.status = this.message.toUpperCase().replace(" ", "_");
+    }
 
-	public String[] getError() {
-		return error;
-	}
+    public ApiMessage(String message, String[] error) {
+        this.message = message;
+        this.error = error;
+        this.status = this.message.toUpperCase().replace(" ", "_");
+    }
+
+    public ApiMessage(String status, T result, String message) {
+        this(message);
+        this.result = result;
+        this.status = status;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public String[] getError() {
+        return error;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public T getResult() {
+        return result;
+    }
+
 }
