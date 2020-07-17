@@ -24,7 +24,7 @@ public class HelloController {
 
 
 
-    private HelloWorldService helloWorldService;
+    private final HelloWorldService helloWorldService;
 
     public HelloController(HelloWorldService helloWorldService) {
         this.helloWorldService = helloWorldService;

@@ -2,15 +2,15 @@ package com.labforward.api.core.domain;
 
 /**
  * Base message response
- * @param <T>
+ * @param <T> any
  */
 public class ApiMessage<T> {
 
     private String status;
-
-    private T result;
-
+    
     protected String message;
+    
+    private T result;    
 
     protected String[] error;
 

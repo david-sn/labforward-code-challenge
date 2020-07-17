@@ -19,9 +19,9 @@ public class HelloWorldService {
 
     public static String DEFAULT_MESSAGE = "Hello World!";
 
-    private Map<String, Greeting> greetings;
+    private final Map<String, Greeting> greetings;
 
-    private EntityValidator entityValidator;
+    private final EntityValidator entityValidator;
 
     public HelloWorldService(EntityValidator entityValidator) {
         this.entityValidator = entityValidator;
