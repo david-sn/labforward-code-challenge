@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "5cff653d-fabb-4e14-aafb-6df28a969ef5",
+		"name": "LabForward",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get default Hello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/hello",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\":\"LabForwarad Msg 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/hello",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/hello/083156a5-e383-48df-a34e-ecf5957534e7",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello",
+						"083156a5-e383-48df-a34e-ecf5957534e7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Message",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\":\"new LabForward Message\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/hello/083156a5-e383-48df-a34e-ecf5957534e7",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello",
+						"083156a5-e383-48df-a34e-ecf5957534e7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Message",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\":\"M5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/hello/42a2e3aa-34b3-4b32-b8ae-950be7a4d0a",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello",
+						"42a2e3aa-34b3-4b32-b8ae-950be7a4d0a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get All Messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/hellos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hellos"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
